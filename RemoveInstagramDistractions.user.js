@@ -4,7 +4,7 @@
 // @version      1.0
 // @description  Remove all the Instagram distractions to get concentrated on what's really important
 // @author       GabryB03
-// @match        https://www.instagram.com/
+// @match        https://www.instagram.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=instagram.com
 // @updateURL    https://github.com/GabryB03/Remove-Instagram-Distractions/raw/main/RemoveInstagramDistractions.user.js
 // @downloadURL  https://github.com/GabryB03/Remove-Instagram-Distractions/raw/main/RemoveInstagramDistractions.user.js
