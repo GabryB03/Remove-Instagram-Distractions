@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Instagram Remove Distractions
 // @namespace    http://tampermonkey.net/
-// @version      1.2
+// @version      1.3
 // @description  Remove all the Instagram distractions to get concentrated on what's really important
 // @author       GabryB03
 // @match        https://www.instagram.com/*
@@ -14,6 +14,12 @@
 (function()
 {
     'use strict';
+
+    if (window.location.href.startsWith("https://www.instagram.com/?"))
+    {
+        window.location.href = "https://www.instagram.com/";
+    }
+
     const css =
     `
         a[href='/explore/'], a[href='/reels/'], a[href='https://www.threads.net/'], footer[role='contentinfo'] { display: none !important; visibility: hidden !important; }
@@ -23,7 +29,6 @@
     styleElement.type = 'text/css';
     styleElement.innerHTML = css;
     head.appendChild(styleElement);
-
 
     function getElementByXpath(path)
     {
