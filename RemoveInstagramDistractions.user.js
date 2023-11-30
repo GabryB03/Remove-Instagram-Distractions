@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Instagram Remove Distractions
 // @namespace    http://tampermonkey.net/
-// @version      1.4
+// @version      1.5
 // @description  Remove all the Instagram distractions to get concentrated on what's really important
 // @author       GabryB03
 // @match        https://www.instagram.com/*
@@ -41,14 +41,14 @@
                 if (window.location.href == 'https://www.instagram.com/')
                 {
                     var feedElement = document.querySelector("main[role='main']");
-    
+
                     if (feedElement != null && feedElement != undefined)
                     {
                         feedElement.remove();
                     }
                 }
 
-                var notificationsElement = getElementByXpath("/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[1]/div/div/div/div/div[2]/div[6]");
+                var notificationsElement = getElementByXpath("/html/body/div[2]/div/div/div[2]/div/div/div[1]/div[1]/div[1]/div/div/div/div/div[2]/div[6]");
 
                 if (notificationsElement != null && notificationsElement != undefined)
                 {
